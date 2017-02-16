@@ -1,0 +1,16 @@
+.mainBottomBar{
+	width: 100%;
+	height: 120px;
+	background-color: #46B4F9;
+}
+.synopsis{
+	width: 100%;
+	height: 20px;
+	padding-top: 50px;
+	font-size: 14px;
+	text-align: center;
+	color: #555;
+}
+.synopsis a{
+	color: #FFF;
+}
