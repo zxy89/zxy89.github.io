@@ -25,10 +25,50 @@
             }
         }
         browserRedirect();
+
+        var currentSelectedIndex;
+
+        function changechannel(btnIndex){
+            // alert("btn"+btnIndex);
+            currentSelectedIndex = btnIndex;
+            for (var i = 0; i < 8; i++) {
+                if (i == btnIndex && btnIndex != 0) {
+                    document.getElementById("btn"+i).style.backgroundColor = "#1AA2FF";
+                }else{
+                    document.getElementById("btn"+i).style.backgroundColor = "#46B4F9";
+                }
+            };
+        }
+
+        function changebackcolor(btnIndex){
+            for (var i = 0; i < 8; i++) {
+                if (i != currentSelectedIndex && btnIndex != 0) {
+                    if (i == btnIndex) {
+                        document.getElementById("btn"+i).style.backgroundColor = "#1AA2FF";
+                    }else{
+                        document.getElementById("btn"+i).style.backgroundColor = "#46B4F9";
+                    }
+                };
+            };
+        }
+
+        function recoveryBackColor(btnIndex){
+            if (btnIndex != currentSelectedIndex) {
+                document.getElementById("btn"+btnIndex).style.backgroundColor = "#46B4F9";
+            };
+        }
+
     </script>
 	<body>
         <div class="navbar">
-
+            <input type="button" value="张兴业的官方网站" id="btn0" onclick="changechannel(0)" onmouseover="changebackcolor(0)" onmouseout="recoveryBackColor(0)">
+            <input type="button" value="Object-C" id="btn1" onclick="changechannel(1)" onmouseover="changebackcolor(1)" onmouseout="recoveryBackColor(1)">
+            <input type="button" value="Swift" id="btn2" onclick="changechannel(2)" onmouseover="changebackcolor(2)" onmouseout="recoveryBackColor(2)">
+            <input type="button" value="Sprite Kit" id="btn3" onclick="changechannel(3)" onmouseover="changebackcolor(3)" onmouseout="recoveryBackColor(3)">
+            <input type="button" value="Html+Css" id="btn4" onclick="changechannel(4)" onmouseover="changebackcolor(4)" onmouseout="recoveryBackColor(4)">
+            <input type="button" value="JavaScript" id="btn5" onclick="changechannel(5)" onmouseover="changebackcolor(5)" onmouseout="recoveryBackColor(5)">
+            <input type="button" value="Python" id="btn6" onclick="changechannel(6)" onmouseover="changebackcolor(6)" onmouseout="recoveryBackColor(6)">
+            <input type="button" value="中国历史" id="btn7" onclick="changechannel(7)" onmouseover="changebackcolor(7)" onmouseout="recoveryBackColor(7)">
         </div>
 
         <div id="mains" class="main">
