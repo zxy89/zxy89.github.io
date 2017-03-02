@@ -2,7 +2,7 @@
 .navbar{
 	width: 100%;
 	height: 80px;
-	background: #46B4F9;
+	/*background: #46B4F9;*/
 	position:fixed;
 }
 .navbar input{
@@ -47,9 +47,10 @@
 /*内容*/
 .main{
 	width: 100%;
-	min-height: 810px;
+	min-height: 600px;
 	background-image: url(../images/mainbg.png);
 	background-size: 100% 100%;
+	background-repeat: no-repeat;
 }
 
 /*底部*/
